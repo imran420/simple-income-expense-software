@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Responsive vertical menu navigation</title>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/income_style.css">
+
+
+	    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<i class="fa fa-tachometer"></i>
+				<span>Brand</span>
+			</div>
+			<a href="#" class="nav-trigger"><span></span></a>
+		</div>
+		<div class="side-nav">
+			<div class="logo">
+				<span>Donation</span>
+			</div>
+
+
+			  <nav>
+			    <ul>
+			      <li><a href="dashboard.html"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+			      <li>
+			        <a href="#" class="serv-btn"> <i class="fa fa-table" aria-hidden="true"></i> Income<span class="fas fa-caret-down second"></span></a>
+			        <ul class="serv-show">
+			          <li><a href="income.html"> <i class="fa fa-tasks" aria-hidden="true"></i> Add New Income</a></li>
+			          <li><a href="income_history.html"><i class="fa fa-tasks" aria-hidden="true"></i> Income History</a></li>
+			        </ul>
+			      </li>
+			      <li>
+			          <a href="#" class="feat-btn"> <i class="fa fa-database" aria-hidden="true"></i> Expense<span class="fas fa-caret-down first"></span></a>
+			          <ul class="feat-show">
+			            <li><a href="expense.html"><i class="fa fa-mobile" aria-hidden="true"></i> Add New Expense</a></li>
+			            <li><a href="expense_history.html"><i class="fa fa-mobile" aria-hidden="true"> </i> Expense History</a></li>
+			          </ul>
+			      </li>
+			      <li><a href="due.html"><i class="fa fa-money" aria-hidden="true"></i> Due</a></li>
+  			      <li><a href="donation.html"><i class="fa fa-home" aria-hidden="true"></i> Donation</a></li>
+			      <li>
+			        <a href="#" class="serv-d-btn"> <i class="fa fa-table" aria-hidden="true"></i> Donation Income<span class="fas fa-caret-down third"></span></a>
+			        <ul class="serv-d-show">
+			          <li><a href="donation_income.html"> <i class="fa fa-tasks" aria-hidden="true"></i> Add New Income</a></li>
+			          <li><a href="donation_income_history.html"><i class="fa fa-tasks" aria-hidden="true"></i> Income History</a></li>
+			        </ul>
+			      </li>
+  			      <li class="active">
+			        <a href="#" class="serv-b-btn"> <i class="fa fa-database" aria-hidden="true"></i> Donation Expense<span class="fas fa-caret-down forth"></span></a>
+			        <ul class="serv-b-show">
+			          <li class="active"><a href="donation_expense.html"> <i class="fa fa-tasks" aria-hidden="true"></i> Add New Expense</a></li>
+			          <li><a href="donation_expense_history.html"><i class="fa fa-tasks" aria-hidden="true"></i> Expense History</a></li>
+			        </ul>
+			      </li>
+					<li> <a href="loan.html"><i class="fa fa-spinner" aria-hidden="true"></i>Loan</a></li>
+					<li class="active"><a href="history.html"><i class="fa fa-history" aria-hidden="true"></i> History</a></li>
+
+				</ul>
+			  </nav>
+
+
+
+
+		</div>
+
+		<script type="text/javascript" src="css/main.js"></script>
+
+		<div class="main-content">
+			<div class="title">
+				Donation Expense Input
+			</div>
+			<div class="income_content_flex">
+				<div class="income_content">
+				  <form action="" id="from">
+					<label for="today">Date</label>
+					<input id="today" type="date">
+				    <label for="d_expensetitle">Expense Title</label>
+				    <input type="text" id="d_expensetitle" name="expensetitle" placeholder="Expense Title.........">
+				    <label for="d_expenseamount">Amount</label>
+				    <input type="number" id="d_expenseamount" name="amount" placeholder="Amount of cost(ex.12987398712)">
+					<input type="button" value="Submit" id="adddonationexpense" >
+				  </form>
+				</div>
+							<!-- History Part -->
+
+
+				<div class="voter_list">
+			        <ul>
+			          <li>
+			            <div class="list_flex" style="background-color: white; border:1px solid gray ; font-weight: bold;">
+			              <div class="list_flex_value" style="border-right: 1px solid black;">Date</div>
+			              <div class="list_flex_value" style="border-right: 1px solid black;">Expense title</div>
+			              <div class="list_flex_value" style="border-right: 1px solid black;">Amount</div>
+			            </div>
+			          </li>
+
+			        </ul>
+					<form id="fromhistory"><ul id="d_expensehistory"></ul></form>
+			    </div>
+
+			</div>
+		</div>
+		<!--===============================================================================================-->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/animsition/js/animsition.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/select2/select2.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/daterangepicker/moment.min.js"></script>
+		<script src="vendor/daterangepicker/daterangepicker.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/countdowntime/countdowntime.js"></script>
+		<!--===============================================================================================-->
+		<script src="js/main.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+		<script type="text/javascript" src="js/databaseconfig.js"></script>
+		<script type="text/javascript" src="js/donationexpense.js"></script>
+		<script type="text/javascript">
+			const today = moment().format("YYYY-MM-DD").toString();
+
+			document.querySelector("#today").value = today;
+		</script>
+	</body>
+</html>

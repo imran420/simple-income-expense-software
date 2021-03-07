@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Responsive vertical menu navigation</title>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+		<link rel="stylesheet" href="css/main.css">
+
+
+	    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+
+
+
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<i class="fa fa-tachometer"></i>
+				<span>Brand</span>
+			</div>
+			<a href="#" class="nav-trigger"><span></span></a>
+		</div>
+		<div class="side-nav">
+			<div class="logo">
+				<span>39 DNCC</span>
+			</div>
+
+			  <nav>
+			    <ul>
+			      <li><a href="dashboard.html"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+			      <li>
+			        <a href="#" class="serv-btn"> <i class="fa fa-table" aria-hidden="true"></i> Income<span class="fas fa-caret-down second"></span></a>
+			        <ul class="serv-show">
+			          <li><a href="income.html"> <i class="fa fa-tasks" aria-hidden="true"></i> Add New Income</a></li>
+			          <li><a href="income_history.html"><i class="fa fa-tasks" aria-hidden="true"></i> Income History</a></li>
+			        </ul>
+			      </li>
+			      <li>
+			          <a href="#" class="feat-btn"> <i class="fa fa-database" aria-hidden="true"></i> Expense<span class="fas fa-caret-down first"></span></a>
+			          <ul class="feat-show">
+			            <li><a href="expense.html"><i class="fa fa-mobile" aria-hidden="true"></i> Add New Expense</a></li>
+			            <li><a href="expense_history.html"><i class="fa fa-mobile" aria-hidden="true"> </i> Expense History</a></li>
+			          </ul>
+			      </li>
+			      <li><a href="due.html"><i class="fa fa-money" aria-hidden="true"></i> Due</a></li>
+  			      <li><a href="donation.html"><i class="fa fa-home" aria-hidden="true"></i> Donation</a></li>
+			      <li>
+			        <a href="#" class="serv-d-btn"> <i class="fa fa-table" aria-hidden="true"></i> Donation Income<span class="fas fa-caret-down third"></span></a>
+			        <ul class="serv-d-show">
+			          <li><a href="donation_income.html"> <i class="fa fa-tasks" aria-hidden="true"></i> Add New Income</a></li>
+			          <li><a href="donation_income_history.html"><i class="fa fa-tasks" aria-hidden="true"></i> Income History</a></li>
+			        </ul>
+			      </li>
+  			      <li>
+			        <a href="#" class="serv-b-btn"> <i class="fa fa-database" aria-hidden="true"></i> Donation Expense<span class="fas fa-caret-down forth"></span></a>
+			        <ul class="serv-b-show">
+			          <li><a href="donation_expense.html"> <i class="fa fa-tasks" aria-hidden="true"></i> Add New Expense</a></li>
+			          <li><a href="donation_expense_history.html"><i class="fa fa-tasks" aria-hidden="true"></i> Expense History</a></li>
+			        </ul>
+			      </li>
+					<li> <a href="loan.html"><i class="fa fa-spinner" aria-hidden="true"></i>Loan</a></li>
+
+					<li class="active"><a href="history.html"><i class="fa fa-history" aria-hidden="true"></i> History</a></li>
+			    </ul>
+			  </nav>
+		</div>
+
+		<script type="text/javascript" src="css/main.js"></script>
+
+
+		<div class="main-content">
+			<div class="title">
+				Analytics
+			</div>
+			<div class="main">
+				<div class="widget" style="background-color: #8BC5EF; border: 3px solid #4CABF0">
+					<h1>Total Balance</h1>
+					<div class="chart"><h2><span  id="currentbalance"></span> ৳ </h2></div>
+				</div>
+				<div class="widget" style="background-color: #FEF0CE; border: 3px solid #F7CC67">
+					<h1>Total income</h1>
+					<div class="chart"><h2><span id="totalincome"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #FED2D5; border: 3px solid #F9A9AF">
+					<h1>Total Expense</h1>
+					<div class="chart"><h2> <span id="totalexpense"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #C6F5E0; border: 3px solid #93E5C0">
+					<h1>Total Due</h1>
+					<div class="chart"><h2> <span id="due"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #8BC5EF; border: 3px solid #4CABF0">
+					<h1>Current Month Balance</h1>
+					<div class="chart"><h2> <span id="thismonthebalance"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #FEF0CE; border: 3px solid #F7CC67">
+					<h1>Current Month Income</h1>
+					<div class="chart"><h2> <span id="thismonthincome"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #FED2D5; border: 3px solid #F9A9AF">
+					<h1>Current Month Expense</h1>
+					<div class="chart"><h2> <span id="thismonthexpense"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #C6F5E0; border: 3px solid #93E5C0">
+					<h1>Current Month Due</h1>
+					<div class="chart"><h2> <span id="thismonthdue"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #8BC5EF; border: 3px solid #4CABF0">
+					<h1>Last Month Balance</h1>
+					<div class="chart"><h2> <span id="lastmonthebalance"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #FEF0CE; border: 3px solid #F7CC67">
+					<h1>Last Month Income</h1>
+					<div class="chart"><h2> <span id="lastmontheincome"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #FED2D5; border: 3px solid #F9A9AF">
+					<h1>Last Month Expense</h1>
+					<div class="chart"><h2> <span id="lastmonthexpense"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #C6F5E0; border: 3px solid #93E5C0">
+					<h1>Last Month Due</h1>
+					<div class="chart"><h2> <span id="lastmonthedue"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #8BC5EF; border: 3px solid #4CABF0">
+					<h1>Total Loan</h1>
+					<div class="chart"><h2> <span id="totalloan"></span> ৳</h2></div>
+				</div>
+				<div class="widget" style="background-color: #FEF0CE; border: 3px solid #F7CC67">
+					<h1>Total Piad Loan</h1>
+					<div class="chart"><h2> <span id="totalpaidloan"></span> ৳</h2></div>
+				</div>
+			</div>
+
+		</div>
+		<!--===============================================================================================-->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/animsition/js/animsition.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/bootstrap/js/popper.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/select2/select2.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/daterangepicker/moment.min.js"></script>
+		<script src="vendor/daterangepicker/daterangepicker.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/countdowntime/countdowntime.js"></script>
+		<!--===============================================================================================-->
+		<script src="js/main.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-storage.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-analytics.js"></script>
+		<script type="text/javascript" src="js/databaseconfig.js"></script>
+
+		<!--		<script type="text/javascript" src="js/login.js"></script>-->
+		<!--<script type="text/javascript" src="js/dashboard.js"></script>-->
+
+		<script type="text/javascript" src="js/historypage.js"></script>
+
+	</body>
+</html>

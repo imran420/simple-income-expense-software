@@ -1,0 +1,109 @@
+.main-content {
+  padding: 40px;
+  margin-top: 0;
+  padding: 0;
+  padding-top: 44px;
+  height: 100vh;
+  overflow: scroll;
+}
+.main-content .title {
+  background-color: #eef1f7;
+  border-bottom: 1px solid #b8bec9;
+  padding: 10px 20px;
+  font-weight: 700;
+  color: #333;
+  font-size: 18px;
+}
+
+.voter_list
+{
+  width: 95%;
+  margin-left: 2.5%;
+  /*background-color: red;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.voter_list ul
+{
+  list-style: none;
+}
+
+.voter_list ul li
+{
+  /*border: 1px solid black;*/
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.list_flex
+{
+  display: flex;
+  flex-wrap:wrap;
+  
+}
+
+.list_flex_value
+{
+  width: 13%;
+  margin-right: 10px;
+  padding: 10px;
+  /*background-color: red;*/
+}
+
+
+.content{
+  background-color: white;
+  width: 85%;
+  height: 90vh;
+  padding-top: 60px;
+}
+
+.search_content
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.search_content h3
+{
+  width: 25%;
+  font-size: 18px;
+  text-align: center;
+  /*background-color: red;*/
+  padding-top: 10px;
+  font-weight: 300;
+}
+
+.search_content_right
+{
+  width: 70%;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  /*float: left;*/
+  margin-left: 20px;
+  width: 15%;
+  padding: 5px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
